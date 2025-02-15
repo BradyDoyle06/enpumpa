@@ -24,11 +24,13 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 10px 15px;
+    position: relative;
 }
 
 nav ul li a {
@@ -37,6 +39,32 @@ nav ul li a {
     color: white;
     font-weight: bold;
     padding: 10px 15px;
+    display: block;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #3a3a3a;
+    width: 150px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    color: white;
+    text-align: center;
 }
 
 /* ======= HERO SECTION ======= */
@@ -113,21 +141,25 @@ footer {
 @media screen and (max-width: 768px) {
     /* NAVBAR FIX */
     nav ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     nav ul li {
         display: block;
-        margin: 5px 0;
+        text-align: center;
     }
 
     .dropdown-menu {
-        position: static;
-        display: block;
-        text-align: center;
+        position: relative;
+        display: none;
+        width: 100%;
         background: none;
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 
     .dropdown-menu a {
@@ -184,4 +216,3 @@ footer {
         font-size: 16px;
     }
 }
-
