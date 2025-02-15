@@ -120,7 +120,7 @@ footer {
     font-size: 18px;
 }
 
-/* ======= GALLERY STYLING (FIXED) ======= */
+/* ======= GALLERY FIXED ======= */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -133,13 +133,15 @@ footer {
 .gallery-container img {
     width: 100%;
     height: auto;
+    max-width: 100%;
     border-radius: 5px;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
 /* ======= MOBILE FIXES (For Screens Below 768px) ======= */
 @media screen and (max-width: 768px) {
-    /* NAVBAR FIX */
+    /* FIX NAVIGATION */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -190,10 +192,10 @@ footer {
         font-size: 18px;
     }
 
-    /* GALLERY FIX (FULL WIDTH ON MOBILE) */
+    /* 🔥 GALLERY FIXED FOR MOBILE 🔥 */
     .gallery-container {
-        grid-template-columns: 1fr;
-        width: 95%;
+        grid-template-columns: 1fr; /* Force images to take full width */
+        width: 100%;
     }
 
     .gallery-container img {
@@ -202,6 +204,7 @@ footer {
         height: auto;
         display: block;
         margin: 10px auto;
+        object-fit: contain;
     }
 
     /* BUTTON SIZE FIX */
