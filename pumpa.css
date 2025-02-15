@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Darker background for a premium feel */
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #3a3a3a; /* Dark grey */
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    color: #ff4d4d; /* Subtle red hover effect */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #3a3a3a;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.dropdown-menu a:hover {
+    background: #ff4d4d;
+}
+
+/* Hero Section */
+.hero {
+    background: #4a4a4a;
+    padding: 70px 20px;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* Section Styles */
+.section-red {
+    background: red;
+    padding: 50px 20px;
+    font-size: 28px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-grey {
+    background: #3a3a3a;
+    padding: 50px 20px;
+    font-size: 28px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #ff4d4d;
+    padding: 12px 25px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #cc0000;
+}
+
+/* Footer */
+footer {
+    background: #3a3a3a;
+    padding: 20px;
+    font-size: 20px;
+}
