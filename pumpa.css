@@ -1,25 +1,25 @@
-/* General Styles */
+/* ======= GENERAL STYLES ======= */
 body {
     font-family: "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Darker background for a premium feel */
+    background-color: #121212;
     color: white;
     text-align: center;
 }
 
-/* Header */
+/* ======= HEADER & NAVIGATION ======= */
 header {
-    background: #3a3a3a; /* Dark grey */
+    background: #3a3a3a;
     padding: 20px;
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin: 10px 0;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav ul {
     list-style: none;
     padding: 0;
@@ -39,77 +39,32 @@ nav ul li a {
     padding: 10px 15px;
 }
 
-nav ul li a:hover {
-    color: #ff4d4d; /* Subtle red hover effect */
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background: #3a3a3a;
-    padding: 10px;
-    border-radius: 5px;
-    min-width: 150px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.dropdown-menu a:hover {
-    background: #ff4d4d;
-}
-
-/* Hero Section */
+/* ======= HERO SECTION ======= */
 .hero {
     background: #4a4a4a;
-    padding: 70px 20px;
-    font-size: 42px;
+    padding: 50px 20px;
+    font-size: 32px;
     font-weight: bold;
 }
 
-/* Section Styles */
-.section-red {
-    background: red;
-    padding: 50px 20px;
-    font-size: 28px;
-    margin: 30px auto;
-    width: 80%;
+/* ======= SECTIONS (RED & GREY) ======= */
+.section-red, .section-grey {
+    padding: 30px;
+    font-size: 22px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
-.section-grey {
-    background: #3a3a3a;
-    padding: 50px 20px;
-    font-size: 28px;
-    margin: 30px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Buttons */
+/* ======= BUTTON STYLES ======= */
 .btn {
     display: inline-block;
     background: #ff4d4d;
     padding: 12px 25px;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
@@ -120,27 +75,36 @@ nav ul li a:hover {
     background: #cc0000;
 }
 
-/* Footer */
+/* ======= FOOTER ======= */
 footer {
     background: #3a3a3a;
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: 18px;
 }
 
+/* ======= GALLERY STYLING ======= */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* ======= MOBILE FIXES (For Screens Below 768px) ======= */
 @media screen and (max-width: 768px) {
-    /* Make text and sections fit smaller screens */
-    .hero {
-        font-size: 28px;
-        padding: 40px 10px;
-    }
-
-    .section-red, .section-grey {
-        font-size: 20px;
-        padding: 25px;
-        width: 95%;
-    }
-
-    /* Navbar: Keep desktop look, but make it stack properly on mobile */
+    /* NAVBAR FIX */
     nav ul {
         display: flex;
         flex-direction: column;
@@ -152,47 +116,63 @@ footer {
         margin: 5px 0;
     }
 
-    /* Ensure buttons don’t look oversized */
+    .dropdown-menu {
+        position: static;
+        display: block;
+        text-align: center;
+        background: none;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* HERO SECTION FIX */
+    .hero {
+        font-size: 26px;
+        padding: 40px 10px;
+    }
+
+    /* SECTION TEXT FIX */
+    .section-red, .section-grey {
+        font-size: 20px;
+        padding: 25px;
+        width: 95%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    /* GALLERY FIX */
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container img {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* BUTTON SIZE FIX */
     .btn {
         font-size: 18px;
         padding: 10px 20px;
     }
 
-    /* Adjust footer text size */
+    /* FOOTER TEXT FIX */
     footer {
         font-size: 16px;
-    }
-}
-
-/* Gallery Image Fixes */
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-}
-
-.gallery-container img {
-    width: 300px; /* Default size for desktop */
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Mobile Fixes */
-@media screen and (max-width: 768px) {
-    .gallery-container {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center; /* Center align images */
-    }
-
-    .gallery-container img {
-        width: 90%; /* Make images fit screen width */
-        max-width: 400px; /* Prevent them from getting too big */
     }
 }
