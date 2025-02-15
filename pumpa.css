@@ -126,3 +126,40 @@ footer {
     padding: 20px;
     font-size: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    /* Make text and sections fit smaller screens */
+    .hero {
+        font-size: 28px;
+        padding: 40px 10px;
+    }
+
+    .section-red, .section-grey {
+        font-size: 20px;
+        padding: 25px;
+        width: 95%;
+    }
+
+    /* Navbar: Keep desktop look, but make it stack properly on mobile */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Ensure buttons don’t look oversized */
+    .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    /* Adjust footer text size */
+    footer {
+        font-size: 16px;
+    }
+}
